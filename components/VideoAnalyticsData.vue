@@ -17,4 +17,23 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted, computed } from "vue";
+
+const analyticsData = ref(null);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/api/fetchAnalyticsData");
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch analytics data");
+    }
+    analyticsData.value = await response.json();
+  } catch (error) {
+    console.error("Error fetching analytics data:", error);
+  }
+});
+
+const totalViews = computed(() => analyticsData.value?.data.length || 0);
+</script>
