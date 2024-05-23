@@ -14,9 +14,6 @@
         />
       </div>
       <div class="w-full p-6">
-        <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">
-          Video Engagement Metrics
-        </h2>
         <div class="flex justify-center items-center">
           <VideoAnalyticsData />
         </div>
