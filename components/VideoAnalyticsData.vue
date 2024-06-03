@@ -10,8 +10,10 @@
   <div v-else class="flex flex-col items-center w-full">
     <div class="grid grid-cols-1 gap-6 w-full">
       <div class="bg-white rounded-lg p-4 shadow-md text-center">
-        <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Views</h3>
-        <p class="text-3xl font-bold text-gray-900">{{ totalViews }}</p>
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">
+          Total Unique Views
+        </h3>
+        <p class="text-3xl font-bold text-gray-900">{{ uniqueViews }}</p>
       </div>
     </div>
   </div>
